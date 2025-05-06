@@ -1,0 +1,13 @@
+package mk.ukim.finki.mk.bookandstay_application.repository;
+
+import mk.ukim.finki.mk.bookandstay_application.model.domain.Host;
+import mk.ukim.finki.mk.bookandstay_application.model.projections.HostProjection;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface HostRepository extends JpaRepository<Host,Long> {
+    List<HostProjection> findAllBy();
+}
